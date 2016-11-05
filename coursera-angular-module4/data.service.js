@@ -9,7 +9,7 @@
         service.getAllCategories = function() {
             return $http({
                 method: 'GET',
-                url: 'http://davids-restaurant.herokuapp.com/categories.json'
+                url: 'https://davids-restaurant.herokuapp.com/categories.json'
             });
         };
 
