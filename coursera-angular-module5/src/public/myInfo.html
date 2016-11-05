@@ -1,0 +1,14 @@
+<div ng-if="myInfoControl.saved" style="text-align:center">
+  <legend style="color:white">My Info</legend>
+<label for="firstName">First Name: </label> {{myInfoControl.firstName}}<br>
+<label for="lastName">Last Name: </label> {{myInfoControl.lastName}}<br>
+<label for="emailAddress">Email Address: </label> {{myInfoControl.email}}<br>
+<label for="phoneNumber">Phone Number: </label> {{myInfoControl.phone}}<br>
+<label for="favItem">Favorite Item: </label><br>
+<label for="itemName">Item Title: </label> {{myInfoControl.itemName}}<br>
+<label for="ItemDesc">Item Description: </label> {{myInfoControl.itemDesc}}<br>
+<label for="ItemImage">Item Image: </label> <img ng-src="{{myInfoControl.itemImg}}" style="border:1px solid black"></img><br>
+</div>
+<div ng-if="!myInfoControl.saved">
+  <label for="notSigned">Not Signed Up Yet.<a ui-sref="public.signUp"> Sign up Now!</a></label>
+</div>
