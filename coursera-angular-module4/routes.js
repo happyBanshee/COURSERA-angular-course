@@ -27,18 +27,7 @@
 
             .state('items', {
                 url: '/items/{categoryParam}',
-                templateUrl: 'data.template.html',
-                controller: 'DataController as dataCtrl',
-                resolve: {
-                    itemsList: ['$stateParams', 'MenuDataService',
-                        function ($stateParams, MenuDataService) {
-                            return MenuDataService.getItemsForCategory($stateParams.categoryParam)
-                                .then(function(res){
-                                return res.data.menu_items;
-                            })
-                        }]
-                }
+                templateUrl: 'data.template.html'
             });
     }
-
 })();

@@ -7,8 +7,6 @@
     MenuAppController.$inject = ['MenuDataService'];
     function MenuAppController(MenuDataService) {
         var mainList = this;
-        mainList.items = [];
-
 
         mainList.$onInit = function () {
             MenuDataService.getAllCategories()

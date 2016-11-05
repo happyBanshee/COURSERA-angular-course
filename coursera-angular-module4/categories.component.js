@@ -17,27 +17,3 @@
             }
         });
 })();
-
-
-
-
-// (function(){
-//     angular.module('App')
-//         .directive('categories', categoriesDirective);
-//
-// })();
-//
-// function categoriesDirective() {
-//     return {
-//         templateUrl: 'menuapp.template.html',
-//         scope: {
-//             items: '<',
-//            // myTitle: '@title',
-//             //onRemove: '&',
-//             key: '<'
-//         }
-//         // controller: FoundItemsDirectiveController,
-//         // controllerAs: 'found',
-//         // bindToController: true
-//     }
-// }

@@ -2,11 +2,16 @@
     angular.module('Data')
         .controller('DataController', dataController);
 
-    dataController.$inject = ['itemsList'];
-    function dataController(itemsList) {
+    dataController.$inject = ['$stateParams', 'MenuDataService'];
+    function dataController($stateParams, MenuDataService) {
+        var categoryParam = $stateParams.categoryParam;
         var dataCtrl = this;
 
-        dataCtrl.items = itemsList;
-        console.log(dataCtrl.items);
+        dataCtrl.items = [];
+
+        MenuDataService.getItemsForCategory(categoryParam)
+            .then(function (res) {
+                dataCtrl.items = res.data.menu_items;
+            });
     }
 })();

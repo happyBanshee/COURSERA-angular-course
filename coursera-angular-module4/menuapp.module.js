@@ -1,3 +1,3 @@
 (function(){
-    angular.module('menuApp',['Data','ui.router']);
+    angular.module('menuApp',['ui.router','Data']);
 })();
