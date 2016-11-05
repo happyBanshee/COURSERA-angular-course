@@ -1,0 +1,11 @@
+<div id="items" ng-controller='DataController as dataCtrl'>
+    <a ui-sref="home">Home</a> &lt; <span>Category</span> &lt; <span>Item</span>
+    <h3>Item</h3>
+
+    <ul>
+        <li ng-repeat="item in dataCtrl.items">
+            <strong>Name:</strong> {{item.name}}
+            <strong>Description:</strong> {{item.description}}
+        </li>
+    </ul>
+</div>
